@@ -658,6 +658,14 @@ export interface Options {
   initialTracks?: Track[];
 
   /**
+   * When enabled, the currently playing track repeats instead of advancing to
+   * the next playlist entry.
+   *
+   * Default: `false`
+   */
+  initialTrackRepeat?: boolean;
+
+  /**
    * An array of objects representing available skins.
    *
    * These will appear in the "Options" menu under "Skins".

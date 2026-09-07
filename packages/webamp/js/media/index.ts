@@ -53,6 +53,10 @@ export interface IMedia {
    */
   stop(): void;
   /**
+   * Configure whether the current track restarts when it reaches the end.
+   */
+  setTrackRepeat(enabled: boolean): void;
+  /**
    * Seek to a specific position as a percentage of the total duration
    */
   seekToPercentComplete(percent: number): void;
@@ -262,6 +266,10 @@ export default class Media implements IMedia {
 
   stop() {
     this._source.stop();
+  }
+
+  setTrackRepeat(enabled: boolean) {
+    this._source.setLoop(enabled);
   }
 
   /* Actions with arguments */

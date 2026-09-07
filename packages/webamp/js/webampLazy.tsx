@@ -81,6 +81,7 @@ class Webamp {
     this.options = options;
     const {
       initialTracks,
+      initialTrackRepeat = false,
       initialSkin,
       availableSkins,
       enableHotkeys = false,
@@ -128,6 +129,7 @@ class Webamp {
     // TODO: Validate required options.
 
     this.media = new (__customMediaClass || Media)();
+    this.media.setTrackRepeat(initialTrackRepeat);
     this.store = getStore(
       this.media,
       this._actionEmitter,
@@ -239,6 +241,14 @@ class Webamp {
    */
   stop(): void {
     this.store.dispatch(Actions.stop());
+  }
+
+  /**
+   * Configure whether the active track repeats instead of advancing to the
+   * next playlist entry.
+   */
+  repeatTrack(enabled = true): void {
+    this.media.setTrackRepeat(enabled);
   }
 
   /**
