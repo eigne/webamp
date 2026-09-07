@@ -81,6 +81,7 @@ class Webamp {
     this.options = options;
     const {
       initialTracks,
+      initialTrackRepeat = false,
       initialSkin,
       availableSkins,
       enableHotkeys = false,
@@ -128,6 +129,7 @@ class Webamp {
     // TODO: Validate required options.
 
     this.media = new (__customMediaClass || Media)();
+    this.media.setTrackRepeat(initialTrackRepeat);
     this.store = getStore(
       this.media,
       this._actionEmitter,
@@ -239,6 +241,13 @@ class Webamp {
    */
   stop(): void {
     this.store.dispatch(Actions.stop());
+  }
+
+  /**
+   * Whether to repeat the current track or not.
+   */
+  repeatTrack(enabled = true): void {
+    this.media.setTrackRepeat(enabled);
   }
 
   /**

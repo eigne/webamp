@@ -229,6 +229,16 @@ Toggle repeat mode between enabled and disabled.
 webamp.toggleRepeat();
 ```
 
+### `repeatTrack(enabled = true): void`
+
+Configure whether the active track repeats when it reaches the end. This is
+separate from `toggleRepeat()`, which repeats the playlist.
+
+```ts
+webamp.repeatTrack();
+webamp.repeatTrack(false);
+```
+
 ### `renderInto(domNode: HTMLElement): Promise<void>`
 
 Webamp will wait until it has fetched the skin and fully parsed it, and then render itself as a child of the provided `domNode` and position itself in the center of that DOM node.

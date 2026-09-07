@@ -116,6 +116,10 @@ export default class ElementSource {
     this._audio.src = url;
   }
 
+  setLoop(loop: boolean) {
+    this._audio.loop = loop;
+  }
+
   async play() {
     if (this._status !== MEDIA_STATUS.PAUSED) {
       this.seekToTime(0);

@@ -658,6 +658,11 @@ export interface Options {
   initialTracks?: Track[];
 
   /**
+   * Whether to repeat the current track or not.
+   */
+  initialTrackRepeat?: boolean;
+
+  /**
    * An array of objects representing available skins.
    *
    * These will appear in the "Options" menu under "Skins".

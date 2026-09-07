@@ -38,6 +38,18 @@ const webamp = new Webamp({
 });
 ```
 
+### `initialTrackRepeat`
+
+When `true`, Webamp repeats the active track when it reaches the end, rather
+than advancing to the next track in the playlist. Defaults to `false`.
+
+```ts
+const webamp = new Webamp({
+  initialTrackRepeat: true,
+  // ...other config options
+});
+```
+
 ### `initialSkin`
 
 An object representing the initial skin to use. If omitted, the default skin, included in the bundle, will be used. **The URL must be served with the [correct CORS headers](../07_guides/01_cors.md).**
