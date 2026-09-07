@@ -658,10 +658,7 @@ export interface Options {
   initialTracks?: Track[];
 
   /**
-   * When enabled, the currently playing track repeats instead of advancing to
-   * the next playlist entry.
-   *
-   * Default: `false`
+   * Whether to repeat the current track or not.
    */
   initialTrackRepeat?: boolean;
 
