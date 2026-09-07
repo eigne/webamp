@@ -235,8 +235,8 @@ Configure whether the active track repeats when it reaches the end. This is
 separate from `toggleRepeat()`, which repeats the playlist.
 
 ```ts
-webamp.repeatTrack(); // Enable repeating the active track.
-webamp.repeatTrack(false); // Disable it.
+webamp.repeatTrack();
+webamp.repeatTrack(false);
 ```
 
 ### `renderInto(domNode: HTMLElement): Promise<void>`
