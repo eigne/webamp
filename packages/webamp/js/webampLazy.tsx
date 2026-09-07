@@ -244,8 +244,7 @@ class Webamp {
   }
 
   /**
-   * Configure whether the active track repeats instead of advancing to the
-   * next playlist entry.
+   * Whether to repeat the current track or not.
    */
   repeatTrack(enabled = true): void {
     this.media.setTrackRepeat(enabled);
